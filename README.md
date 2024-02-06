@@ -23,4 +23,6 @@ npx tailwindcss init --full
 
 npx webpack --config webpack.config.js
 
+npm install html-loader --save-dev
+
 ```

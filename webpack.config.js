@@ -34,6 +34,18 @@ module.exports = {
         filename: 'index.html',
         template: './src/index.html',
         chunks: ['homepage']
+    }),
+    new HtmlWebpackPlugin({
+        title: 'Về chúng tôi',
+        filename: 'about.html',
+        template: './src/about.html',
+        chunks: ['about']
+    }),
+    new HtmlWebpackPlugin({
+        title: 'Liên hệ',
+        filename: 'contact.html',
+        template: './src/contact.html',
+        chunks: ['contact']
     })
   ],
 //   optimization: {
