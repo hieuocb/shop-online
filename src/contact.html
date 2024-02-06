@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
-<body>
-    
+<body class="bg-white dark:bg-slate-800 min-h-screen flex flex-col h-screen">
+    <%= require('html-loader!./components/header.html').default %>
+    <div class="main container mx-auto px-4 bg-white dark:bg-slate-800 flex-grow">
+        <div>contact</div>
+    </div>
+    <%= require('html-loader!./components/footer.html').default %>
+    <script src="shop.bundle.js"></script>
 </body>
 </html>
