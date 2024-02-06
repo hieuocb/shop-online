@@ -1,3 +1,5 @@
+import '../css/style.css';
+
 (() => {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
@@ -8,6 +10,8 @@
     }
 })()
 
+document.getElementById('change-theme').addEventListener("click", changeTheme)
+
 function changeTheme() {
     if (localStorage.theme === 'dark') {
         localStorage.theme = 'light';
@@ -16,10 +20,20 @@ function changeTheme() {
         localStorage.theme = 'dark';
         document.documentElement.classList.add('dark');
     }
-    
-    // // Whenever the user explicitly chooses dark mode
-    // localStorage.theme = 'dark'
-    
-    // // Whenever the user explicitly chooses to respect the OS preference
-    // localStorage.removeItem('theme')
 }
+
+// function changeTheme() {
+//     if (localStorage.theme === 'dark') {
+//         localStorage.theme = 'light';
+//         document.documentElement.classList.remove('dark');
+//     } else {
+//         localStorage.theme = 'dark';
+//         document.documentElement.classList.add('dark');
+//     }
+    
+//     // // Whenever the user explicitly chooses dark mode
+//     // localStorage.theme = 'dark'
+    
+//     // // Whenever the user explicitly chooses to respect the OS preference
+//     // localStorage.removeItem('theme')
+// }
